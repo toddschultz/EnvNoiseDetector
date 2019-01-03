@@ -1,5 +1,7 @@
 # Ignore data folder
-data/
+data/DataExamples
+data/DataExamplesv2
+data/nps
 devdocs/~$amForm.docx
 devdocs/~$EnvNoiseDetectorDataPipelinePresentation.pptx
 devdocs/~$vNoiseDetectorProjectProposal.docx
