@@ -17,7 +17,7 @@ function [pxx,fc] = octaveFeatures(x,fs,varargin)
 %   2 element vector, defaults to [0 fs/2]
 % 
 % Outputs
-% pxx = octave specture features
+% pxx = octave spectral features
 % fc = center frequencies for each band (Hz)
 %
 %   Example
