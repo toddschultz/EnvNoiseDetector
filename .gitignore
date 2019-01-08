@@ -8,3 +8,6 @@ devdocs/~$vNoiseDetectorProjectProposal.docx
 devdocs/~WRL0003.tmp
 devdocs/~$vNoiseDetectorProjectProposalFormatted.docx
 devdocs/~WRL3102.tmp
+data/Features/FeaturesSNR10FFTdf100.mat
+data/Features/FeaturesSNR10FFTdf25.mat
+data/Features/FeaturesSNR10FFTdf50.mat
