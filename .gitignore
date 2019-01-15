@@ -12,3 +12,6 @@ data/Features/FeaturesSNR10FFTdf100.mat
 data/Features/FeaturesSNR10FFTdf25.mat
 data/Features/FeaturesSNR10FFTdf50.mat
 *.asv
+data/Features/FeaturesSNR6FFTdf100.mat
+data/Features/FeaturesSNR6FFTdf50.mat
+data/Features/FeaturesSNR6FFTdf25.mat
