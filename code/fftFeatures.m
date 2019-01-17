@@ -24,7 +24,8 @@ function [pxx,f] = fftFeatures(x,win,noverlap,nfft,fs,varargin)
 %      fs = 51200;
 %      nfft = 1024; win = hann(nfft);
 %      noverlap = nfft*3/4;
-%      [pxx,fc] = fftFeatures(x,win,noverlap,nfft,fs);
+%      xblock = spectralReshape(x,noverlap,nblock);
+%      [pxx,fc] = fftFeatures(xblock,win,noverlap,nfft,fs);
 % 
 %   See also spectrogram, pwelch
 
@@ -49,8 +50,9 @@ parse(p,x,win,noverlap,nfft,fs,varargin{:})
 freqlim = p.Results.FrequencyLimits;    % frequency limits (Hz)
 
 %% Process data
-% Compute short-time FFT-based power spectrum values
-[~,f,~,pxx] = spectrogram(x,win,noverlap,nfft,fs,'power');
+% Compute short-time FFT-based power spectrum values for each column of x
+% [~,f,~,pxx] = spectrogram(x,win,noverlap,nfft,fs,'power');
+[pxx,f] = pwelch(x,win,0,nfft,fs,'power');
 
 % Extract only frequencies of interest
 idxFreq = freqlim(1) <= f & f <= freqlim(2);
@@ -61,4 +63,3 @@ pxx = pxx(idxFreq,:);
 % the shape
 pxx = pxx./sum(pxx);
 end
-
