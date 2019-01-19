@@ -1,9 +1,9 @@
-function se = shannonEntropy(x,level)
+function se = shannonEntropy(x,wname,level)
 y = x; 
 numwindows = size(x,2);
 se = zeros(2^level,size(y,2));
 for kk = 1:size(y,2)
-    wpt = modwpt(y(:,kk),level);
+    wpt = modwpt(y(:,kk),wname,level);
     % Sum across time
     E = sum(wpt.^2,2);
     Pij = wpt.^2./E;
