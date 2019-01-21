@@ -1,1 +1,4 @@
 ModelType,ModelFileName,FeatureType,FeatureFileName,Accuracy,ConfusionMatrix11,ConfusionMatrix21,ConfusionMatrix12,ConfusionMatrix22
+Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_1s.zip,92.90%,337,9,40,306
+Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_3s.zip,85.10%,218,14,55,177
+Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_5s.zip,83.33%,90,24,14,100
