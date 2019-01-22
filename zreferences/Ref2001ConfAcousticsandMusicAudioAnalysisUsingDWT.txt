@@ -1,0 +1,13 @@
+Audio analysis using the discrete wavelet transform
+Authors
+George Tzanetakis, Georg Essl, Perry Cook
+Publication date
+2001/9
+Journal
+Proc. Conf. in Acoustics and Music Theory Applications
+Volume
+66
+
+
+Audio analysis using the discrete wavelet transform
+G Tzanetakis, G Essl, P Cook - Proc. Conf. in Acoustics and Music Theory Applications, 2001
