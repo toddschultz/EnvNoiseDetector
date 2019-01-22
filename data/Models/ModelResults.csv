@@ -2,3 +2,23 @@ ModelType,ModelFileName,FeatureType,FeatureFileName,Accuracy,ConfusionMatrix11,C
 Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_1s.zip,92.90%,337,9,40,306
 Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_3s.zip,85.10%,218,14,55,177
 Convolutional Neural Net (GoogleNet),N/A,Images,WaveletScalograms_5s.zip,83.33%,90,24,14,100
+,,,,,,,,
+Logistic regression,App,SNR6 FFT df25,featureSNR6FFTdf25.mat,61.30%,,,,
+Fine tree,App,SNR6 FFT df26,featureSNR6FFTdf25.mat,78.40%,940.38,315.98,158.37,782.77
+Medium tree,App,SNR6 FFT df27,featureSNR6FFTdf25.mat,75.80%,,,,
+Coarse tree,App,SNR6 FFT df28,featureSNR6FFTdf25.mat,70.00%,,,,
+,,,,,,,,
+Logistic regression,App,SNR 6 FFT df100,featureSNR6FFTdf100.mat,68.30%,,,,
+Fine tree,App,SNR 6 FFT df101,featureSNR6FFTdf100.mat,76.80%,,,,
+Medium tree,App,SNR 6 FFT df102,featureSNR6FFTdf100.mat,74.00%,,,,
+Coarse tree,App,SNR 6 FFT df103,featureSNR6FFTdf100.mat,69.60%,,,,
+,,,,,,,,
+Tree,App,Wavelet Variance,WaveletVarianceModel_L3_DB2,69.50%,,,,
+Logistic regression,App,Wavelet Variance,WaveletVarianceModel_L3_DB3,78.80%,,,,
+Fine Gaussian SVM,App,Wavelet Variance,WaveletVarianceModel_L3_DB4,69.50%,,,,
+cubic SVM,App,Wavelet Variance,WaveletVarianceModel_L3_DB5,61.90%,,,,
+linear SVM,App,Wavelet Variance,WaveletVarianceModel_L3_DB6,74.60%,,,,
+Coarse tree,App,Wavelet Variance,WaveletVarianceModel_L3_DB7,70.30%,,,,
+Coarse KNN,App,Wavelet Variance,WaveletVarianceModel_L3_DB8,49.20%,,,,
+Subspace discriminat ensemble,App,Wavelet Variance,WaveletVarianceModel_L3_DB9,65.30%,,,,
+Boosted trees ensemble,App,Wavelet Variance,WaveletVarianceModel_L3_DB10,49.20%,,,,
