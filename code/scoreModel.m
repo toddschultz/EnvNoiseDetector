@@ -27,11 +27,11 @@ function [acc,fpr,fnr,f1] = scoreModel(ytrue,ypred)
 
 %% Check inputs and outputs
 narginchk(2,2)
-nargoutchk(3,3)
+nargoutchk(1,4)
 
 % ytrue and ypred must be the same type and size
-assert(class(ytrue) == class(ypred),'scoreModel:InputClasses','Classes of inputs ytrue and ypred are not equal.')
-assert(size(ytrue) == size(ypred),'scoreModel:InputSize','Sizes of inputs ytrue and ypred are not equal.')
+assert(strcmp(class(ytrue),class(ypred)),'scoreModel:InputClasses','Classes of inputs ytrue and ypred are not equal.')
+assert(all(size(ytrue) == size(ypred)),'scoreModel:InputSize','Sizes of inputs ytrue and ypred are not equal.')
 
 %% Compute metrics
 confMat = confusionmat(ytrue,ypred);
