@@ -1,4 +1,7 @@
 function [trainedClassifier, validationAccuracy] = dwtL3_T2_SNR6_HMP_Bagged_Gentle(trainingData)
+
+% ###### UTILIZES 40 LEARNERS WITH 0.1 LEARNING RATE ####################
+
 % [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
 % returns a trained classifier and its accuracy. This code recreates the
 % classification model trained in Classification Learner app. Use the
