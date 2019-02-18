@@ -27,7 +27,6 @@ foverlap = 0.5;
 nfeatures = 26;
 
 % Loop over all signal files
-tic
 xfeaturecell = cell(length(signalFiles),1);
 parfor ifile = 1:length(signalFiles)
     % Load file
@@ -49,14 +48,12 @@ end
 xfeature = cell2mat(xfeaturecell);
 % Create table for classifier
 xsignal = array2table(xfeature,'VariableNames',["feature" + (1:nfeatures) "contaminated"]);
-toc
 
 % Make contamination signal assignments
 % one contamination file index for each of the signal files
 contaminationAssign = randi(length(contaminationFiles),1,length(signalFiles));
 
 % Process signal files one at a time and add contamination signals
-tic
 xfeaturecell = cell(length(signalFiles),1);
 parfor ifile = 1:length(signalFiles)
     contaminationFilesLocal = contaminationFiles;
@@ -90,7 +87,6 @@ end
 xfeature = cell2mat(xfeaturecell);
 % Create table for classifier
 xcontamination = array2table(xfeature,'VariableNames',["feature" + (1:nfeatures) "contaminated"]);
-toc
 
 cepFeatureSet = [xsignal; xcontamination];
 end
