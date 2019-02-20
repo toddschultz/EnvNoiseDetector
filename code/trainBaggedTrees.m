@@ -46,24 +46,26 @@ useparpool = ~isempty(gcp);
 %% Extract predictors and response
 % Train a classifier
 % This code specifies all the classifier options and trains the classifier
-% using Bayesian hyperparameter optimization with 5-fold cross validation. 
+% using Bayesian hyperparameter optimization with 5-fold cross validation.
+
 classificationEnsemble = fitcensemble(...
     xfeatures, ...
     xresponses, ...
-    'Method', 'Bag', ...
-    'Learners', 'tree', ...
     'OptimizeHyperparameters','all', ...
-    'HyperparameterOptimizationOptions',struct('UseParallel',useparpool));
+    'HyperparameterOptimizationOptions',struct('UseParallel',useparpool,'MaxObjectiveEvaluations',60,'KFold',5));
+
+% {'NumLearningCycles','LearnRate','MaxNumSplits','MinLeafSize','NumVariablesToSample','SplitCriterion}
 
 % Create the result struct with predict function
 trainedClassifier.predictFcn = @(x) predict(classificationEnsemble, x);
 
 % Add additional fields to the result struct
 trainedClassifier.ClassificationEnsemble = classificationEnsemble;
-trainedClassifier.About = 'This struct is a trained model exported from Classification Learner R2018b.';
+trainedClassifier.About = 'This struct is a trained model from trainBaggedTrees function.';
 trainedClassifier.HowToPredict = sprintf('To make predictions on a new predictor column matrix, X, use: \n  yfit = c.predictFcn(X) \nreplacing ''c'' with the name of the variable that is this struct, e.g. ''trainedModel''. \n \nX must contain exactly 49 columns because this model was trained using 49 predictors. \nX must contain only predictor columns in exactly the same order and format as your training \ndata. Do not include the response column or any columns you did not import into the app. \n \nFor more information, see <a href="matlab:helpview(fullfile(docroot, ''stats'', ''stats.map''), ''appclassification_exportmodeltoworkspace'')">How to predict using an exported model</a>.');
 
 % Estimate performance metrics
+% Only works with Bag classifier
 xpredict = oobPredict(classificationEnsemble);
 [acc,fpr,fnr,f1] = scoreModel(xresponses,xpredict);
 trainedClassifier.Performance.Accuracy = acc;
