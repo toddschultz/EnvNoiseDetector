@@ -34,7 +34,7 @@ assert(strcmp(class(ytrue),class(ypred)),'scoreModel:InputClasses','Classes of i
 assert(all(size(ytrue) == size(ypred)),'scoreModel:InputSize','Sizes of inputs ytrue and ypred are not equal.')
 
 %% Compute metrics
-confMat = confusionmat(ytrue,ypred);
+confMat = confusionmat(ytrue,ypred,'Order',[false true]);
 
 % Accuracy
 acc = sum(diag(confMat))/sum(confMat(:));
