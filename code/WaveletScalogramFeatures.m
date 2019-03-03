@@ -16,7 +16,7 @@ function WaveletScalogramFeatures(x,imageWidth,imageHeight,baseFileName,outputDi
 % outputDir = path to write files out to
 %
 % Outputs
-%   Files written to disk
+%   Files written to disk under outputDir
 % 
 
 % Copyright 2019
