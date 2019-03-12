@@ -6,7 +6,9 @@ This project is the work of Todd Schultz, Rahul Birmiwal, Sean Miller as a porti
 The repo is composed the following folders:
 * code - contains the scripts and functions required to reproduce the results
 * data - contains folders for the raw data, intermediate results, and final results
-* devdocs - contains documents regarding the background of the project and progress reports
+* devdocs - contains documents regarding the background of the project, progress reports, the final project poster and the final report
 * zreferences - contains copy of references useful for the project
 
-A copy of the final report is available in the root folder of the repo. 
+Inside the code folder, there are many scripts and functions that were used to carry out the analysis. The MATLAB Live scripts were used to document and compute the major components of the project. For example, MFCCFeatureGenerator.mlx is the live script that processes the raw time series data and computes the mel-frequency cepstral coefficients feature set. Typically, the live scripts followed a naming convention of XYGenerator.mlx, where X would be the name of the algorithm or model and Y would specify if the result was a feature set, model, or simulation result. Also, many functions are available in the folder and follow a similar naming convention. All of the live scripts and functions are documented thoroughly via in-code comments. 
+
+A PDF copy of the final report is available in the root folder of the repo. 
